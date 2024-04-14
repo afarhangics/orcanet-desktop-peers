@@ -10,9 +10,12 @@ import AppearancePage from "./settings/appearance/AppearancePage";
 import NotificationsPage from "./settings/notifications/NotificationPage";
 import DisplayPage from "./settings/display/DisplayPage";
 import TransferPage from "./settings/transfer/TransferPage";
+import PeersPage from "./peers/PeersPage";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster"
+
+
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
@@ -24,6 +27,7 @@ function App() {
             <Route path="/store" element={<StorePage />} />
             <Route path="/market" element={<MarketPage />} />
             <Route path="/wallet" element={<WalletPage />} />
+            <Route path="/peers" element={<PeersPage />} />
             <Route path="/settings" element={<SettingsPage />}>
               <Route path="profile" element={<ProfilePage />} />
               <Route path="account" element={<AccountPage />} />
@@ -47,6 +51,7 @@ const pageMap: { label: string; path: string }[] = [
   { label: "Store", path: "/store" },
   { label: "Market", path: "/market" },
   { label: "Wallet", path: "/wallet" },
+  { label: "Peers", path: "/peers" },
   { label: "Settings", path: "/settings" },
 ];
 

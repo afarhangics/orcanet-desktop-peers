@@ -5,7 +5,7 @@ import {
   BarChart2,
 } from "lucide-react";
 import { useContext, createContext, useState, ReactNode } from "react";
-import { LayoutDashboard, Settings, Receipt, Package } from "lucide-react";
+import { LayoutDashboard, Settings, Receipt, Package, Network } from "lucide-react";
 export const SidebarContext = createContext({ expanded: true });
 import {
   BrowserRouter as Router,
@@ -95,6 +95,14 @@ const Sidebar = () => {
                 active={isActive("/wallet")}
                 alert={false}
               />
+            </Link>
+            <Link to="/peers">
+              <SidebarItem
+                icon={<Network />}
+                text="Peers"
+                active={isActive('/peers')}
+                alert={false}
+              /> 
             </Link>
             <Link to="/settings/profile">
               <SidebarItem
